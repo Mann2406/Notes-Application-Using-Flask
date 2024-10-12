@@ -11,12 +11,6 @@ def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = "Mann Flask Website"
     app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
-    # database_url = os.environ.get("DATABASE_URL")
-    # if not database_url:
-    #     raise RuntimeError("DATABASE_URL environment variable is not set.")
-    #     app.config['SQLALCHEMY_DATABASE_URI'] = database_url
-
-    # postgresql://notesapp_wy08_user:vyy1rMZQaLAQlqkBVmLeXqt2x6UZiQY1@dpg-cs13cglds78s73b31q20-a.oregon-postgres.render.com/notesapp_wy08
 
     db.init_app(app)
 
